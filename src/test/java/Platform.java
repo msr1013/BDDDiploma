@@ -66,7 +66,7 @@ public class Platform {
     }
 
     public void clickOnLink(String linkValue){
-        dashboardPage.getDashboardElement()
+        dashboardPage.getDashboardElement();
     }
 
     public void validateLandingPage(){

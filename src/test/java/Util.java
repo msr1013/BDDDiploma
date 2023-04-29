@@ -16,6 +16,6 @@ public class Util {
 
     public WebElement myExplicitWait(WebDriver driver,WebElement webElement,int timeInSeconds){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeInSeconds));
-        return wait.until(ExpectedConditions.visibilityOf(webElement);
+        return wait.until(ExpectedConditions.visibilityOf(webElement));
     }
 }
