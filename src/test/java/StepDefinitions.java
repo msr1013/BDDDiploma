@@ -19,7 +19,7 @@ public class StepDefinitions {
 
     @And("User opens google")
     void sumTest(){
-        platform.hitURL("https://www.google.com");
+        platform.hitURL("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
     }
 
     @And("^user enters username (.*) and password admin123$")
