@@ -4,13 +4,7 @@ package pageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-
-
-import java.time.Duration;
+import AppUtil.Util;
 
 
 public class LoginPage {
@@ -26,12 +20,12 @@ public class LoginPage {
     }
 
     public WebElement getUserName(){
-        return driver.findElement(By.xpath());
+        return driver.findElement(By.xpath(inputUsername));
 
     }
 
     public WebElement getPassword(){
-        return driver.findElement(By.xpath());
+        return driver.findElement(By.xpath(inputPassword));
 
     }
 
@@ -44,8 +38,16 @@ public class LoginPage {
     }
 
     public void waitForElementInSeconds(int seconds){
-        
+
     }
+
+    public void loginToApplication(String username, String password) {
+        getUserName().sendKeys(username);
+        getPassword().sendKeys(password);
+        getLoginButton().click();
+    }
+
+
 
 
 

@@ -1,7 +1,5 @@
-import io.cucumber.java.en.And;
+import AppUtil.Util;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import pageObject.DashboardPage;
 import pageObject.LoginPage;
@@ -71,6 +69,7 @@ public class Platform {
 
     public void validateLandingPage(){
 
+            String pageName="Dashboard";
             String textName = dashboardPage.getDashboardElement().getText();
             Assert.assertEquals(pageName,textName);
 
